@@ -23,6 +23,7 @@ class CounterUsingClass extends Component {
   render() {
     return (
       <div>
+        <h3>Counter App Using Class</h3>
         <p>Count: {this.state.count}</p>
         <button onClick={this.increment}>Increment</button>
         <button onClick={this.decrement}>Decrement</button>

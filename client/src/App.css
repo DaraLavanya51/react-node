@@ -1,83 +1,141 @@
+/* Base styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    background-color: #333;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  nav ul li {
-    display: inline;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
-    display: block;
-  }
-  
-  nav ul li a:hover {
-    background-color: #575757;
-  }
-  
-  .container {
-    padding: 20px;
-  }
-  
-  .counter {
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  .counter button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-  
-  .form-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-container form {
-    display: flex;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #575757;
+}
+
+.container {
+  padding: 20px;
+  margin-top: 60px; /* Adjust this value based on the height of your nav bar */
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Hamburger menu styles */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  padding: 14px 20px;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links.open {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
     flex-direction: column;
+    width: 100%;
   }
-  
-  .form-container label {
-    margin-bottom: 10px;
+
+  .nav-links.open {
+    display: flex;
   }
-  
-  .form-container input {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+
+  .nav-links li {
+    text-align: center;
   }
-  
-  .form-container button {
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+  .menu-icon {
+    display: block;
+    color: inherit; /* Ensure the icon color adapts to the theme */
   }
-  
-  .form-container button:hover {
-    background-color: #575757;
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
   }
-  
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+
+  .menu-icon {
+    display: block;
+    color: inherit; /* Ensure the icon color adapts to the theme */
+  }
+}
+
+.toggle-button {
+  margin: 70px 10px 10px 10px; /* Adjust the top margin to place it below the navbar */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001; /* Ensure the button is above other elements */
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+}

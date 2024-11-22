@@ -7,6 +7,7 @@ function CounterAppRedux() {
 
   return (
     <div className="counter">
+      <h3>Counter App Using Redux</h3>
       <p>Count: {count}</p>
       <button onClick={() => dispatch({ type: 'INCREMENT' })}>Increment</button>
       <button onClick={() => dispatch({ type: 'DECREMENT' })}>Decrement</button>
