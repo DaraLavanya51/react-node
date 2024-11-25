@@ -14,6 +14,9 @@ import CounterAppRedux from './CounterAppRedux';
 import CounterUsingClass from "./CounterUsingClass";
 import FormComponent from "./FormComponent";
 import './App.css';
+import Counter from './sass/counter';
+
+
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,6 +41,7 @@ function Navigation() {
         <li><Link to="/weather">Weather</Link></li>
         <li><Link to="/counter-redux">Counter with Redux</Link></li>
         <li><Link to="/counter-class">Counter using class</Link></li>
+        <li><Link to="/counter-sass">Counter Using SASS</Link></li>
       </ul>
     </nav>
   );
@@ -63,6 +67,7 @@ function App() {
             <Route path="/weather" element={<WeatherApp />} />
             <Route path="/counter-redux" element={<CounterAppRedux />} />
             <Route path="/counter-class" element={<CounterUsingClass />} />
+            <Route path='/counter-sass' element={<Counter/>}/>
           </Routes>
         </div>
       </Router>
